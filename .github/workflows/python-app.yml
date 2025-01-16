@@ -31,7 +31,7 @@ jobs:
         python-version: "3.13"
     - name: build
       run: |
-        poetry intall --no-root
+        poetry install --no-root
         poetry run task local
     - name: test
       run: poetry run task test
