@@ -30,7 +30,9 @@ jobs:
       with:
         python-version: "3.13"
     - name: build
-      run: poetry run task local
+      run: |
+        poetry intall --no-root
+        poetry run task local
     - name: test
       run: poetry run task test
     - name: lint
